@@ -10,5 +10,10 @@ class Asteroid extends Floater
     public double getDirectionY() { return myDirectionY; }
     public void setPointDirection(int degrees) { myPointDirection = degrees;}
     public double getPointDirection() { return myPointDirection;}
+    private int rs;
+    
+    public Asteroid()
+    {
+      rs = (int)(Math.
     
 }
