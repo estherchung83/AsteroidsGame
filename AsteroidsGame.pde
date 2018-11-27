@@ -23,6 +23,7 @@ public void draw()
   for( int i= 0; i< lob.length; i++)
   {
     lob[i].show();
+    lob[i].move();
   }
   bob.show(); 
   bob.move();
