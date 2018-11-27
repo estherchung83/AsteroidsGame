@@ -30,6 +30,12 @@ class Asteroid extends Floater
       xCorners[4] = 8;
       xCorners[5] = -5;
       xCorners[5] = 0;
+      myCenterX = (int)(Math.random()*490) + 5;
+      myCenterX = (int)(Math.random()*490) + 5;
+      myPointDirection = (Math.random()* 361);
+      myDirectionX = Math.random() * 5;
+      myDirectionY = Math.random() * 5;
+      
       
     
 }
