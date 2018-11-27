@@ -11,9 +11,25 @@ class Asteroid extends Floater
     public void setPointDirection(int degrees) { myPointDirection = degrees;}
     public double getPointDirection() { return myPointDirection;}
     private int rs;
+    rs = (int)(Math.random()*.5);
     
     public Asteroid()
     {
-      rs = (int)(Math.
+      corners = 6;
+      xCorners = new int[corners];
+      yCorners = new int[corners];
+      xCorners[0] = -11;
+      xCorners[0] = -8;
+      xCorners[1] = 7;
+      xCorners[1] = -8;
+      xCorners[2] = 13;
+      xCorners[2] = 0;
+      xCorners[3] = 6;
+      xCorners[3] = 10;
+      xCorners[4] = -11;
+      xCorners[4] = 8;
+      xCorners[5] = -5;
+      xCorners[5] = 0;
+      
     
 }
