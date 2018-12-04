@@ -24,6 +24,10 @@ public void draw()
   {
     lob.get(i).show();
     lob.get(i).move();
+    float d = dist(bob.getX(), bob.getY(), lob.get(i).getX(),lob.get(i).getY());
+    if (d < 10) {
+      lob.remove(i);
+  }
   }
   bob.show(); 
   bob.move();
