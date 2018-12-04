@@ -1,6 +1,6 @@
 Spaceship bob = new Spaceship();
 Star[] bit = new Star[450];
-Asteroid[] lob = new Asteroid[20];
+ArrayList <Asteroid> lob = new ArrayList <Asteroid>();
 public void setup() 
 {
   size(500,500);
@@ -8,9 +8,9 @@ public void setup()
   {
     bit[i] = new Star();
   }
-  for( int i= 0; i< lob.length; i++)
+  for( int i= 0; i< 20; i++)
   {
-    lob[i] = new Asteroid();
+    lob.add(new Asteroid());
   }
 }
 public void draw() 
@@ -20,10 +20,10 @@ public void draw()
   {
     bit[i].show();
   }
-  for( int i= 0; i< lob.length; i++)
+  for( int i= 0; i< lob.size(); i++)
   {
-    lob[i].show();
-    lob[i].move();
+    lob.get(i).show();
+    lob.get(i).move();
   }
   bob.show(); 
   bob.move();
