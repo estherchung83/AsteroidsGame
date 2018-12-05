@@ -1,1 +1,4 @@
+class Bullet extends Floater  
+{
 
+}
