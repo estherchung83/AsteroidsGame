@@ -12,6 +12,10 @@ class Bullet extends Floater
     public double getPointDirection() { return myPointDirection;}
     
     public Bullet(Spaceship theShip) {
-    
+        myCenterX = 250;
+        myCenterY = 250;
+        myPointDirection = 0;
+        myDirectionX = 5 * Math.cos(dRadians) + DirectionX;
+        myDirectionY = 5 * Math.sin(dRadians) + DirectionY;
     }
 }
