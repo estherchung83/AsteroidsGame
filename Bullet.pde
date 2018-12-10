@@ -15,7 +15,12 @@ class Bullet extends Floater
         myCenterX = 250;
         myCenterY = 250;
         myPointDirection = 0;
+        double dRadians =myPointDirection*(Math.PI/180);
         myDirectionX = 5 * Math.cos(dRadians) + DirectionX;
         myDirectionY = 5 * Math.sin(dRadians) + DirectionY;
+    }
+    
+    public void show() {
+    
     }
 }
