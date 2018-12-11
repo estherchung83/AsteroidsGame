@@ -22,6 +22,6 @@ class Bullet extends Floater
     
     public void show() {
         myColor = color(0,0,0);
-        ellipse(myCenterX,myCenterY,10,10);
+        triangle(myCenterX,myCenterY-2,myCenterX,myCenterY +3,myCenterX+5,myCenterY+1);
     }
 }
