@@ -24,4 +24,8 @@ class Bullet extends Floater
         myColor = color(5,255,15);
         triangle((float)myCenterX,(float)myCenterY-2,(float)myCenterX,(float)myCenterY +3,(float)myCenterX+5,(float)myCenterY+1);
     }
+    
+    public void move() {
+        super.move();
+    }
 }
