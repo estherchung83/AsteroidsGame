@@ -1,7 +1,7 @@
 Spaceship bob = new Spaceship();
 Star[] bit = new Star[450];
 ArrayList <Asteroid> lob = new ArrayList <Asteroid>();
-Bullet bill = new Bullet(bob);
+ArrayList <Bullet> bill = new ArrayList <Bullet>();
 public void setup() 
 {
   size(500,500);
@@ -30,10 +30,12 @@ public void draw()
       lob.remove(i);
   }
   }
+  for(int i=0; i < bill.size();i++) {
+    bill.get(i).show();
+    bill.get(i).move();
+  }
   bob.show(); 
   bob.move();
-  bill.show();
-  bill.move();
 }
 public void keyPressed() {
  if (key=='w')
@@ -46,5 +48,7 @@ public void keyPressed() {
  bob.turn(10);
  if (key =='q')
  bob.hyperspace();
-
+ if (key == ' ')
+ bill.add(new Bullet(bob));
+               
 }
