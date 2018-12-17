@@ -21,6 +21,12 @@ public void draw()
   {
     bit[i].show();
   }
+  for(int i=0; i < bill.size();i++) {
+    bill.get(i).show();
+    bill.get(i).move();
+    if(bill.get(i).getX() > 490 || bill.get(i).getY() > 490)
+      bill.remove(i);
+  }
   for( int i= 0; i< lob.size(); i++)
   {
     lob.get(i).show();
@@ -28,12 +34,20 @@ public void draw()
     float d = dist(bob.getX(), bob.getY(), lob.get(i).getX(),lob.get(i).getY());
     if (d < 10) {
       lob.remove(i);
+    }
+    for (int j =0;j< bill.size();j++)
+    {
+      float r = dist(bill.get(j).getX(), bill.get(j).getY(), lob.get(i).getX(), lob.get(i).getY());
+      if (r <20)
+      {
+        bill.remove(j);
+        lob.remove(i);
+        break;
+      }
+      
+    }
   }
-  }
-  for(int i=0; i < bill.size();i++) {
-    bill.get(i).show();
-    bill.get(i).move();
-  }
+  
   bob.show(); 
   bob.move();
 }
